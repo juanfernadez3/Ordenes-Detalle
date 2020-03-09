@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UI\Consultas\buscar.png" />
+    <None Remove="UI\Registros\buscar.png" />
+    <None Remove="UI\Registros\eliminar.png" />
+    <None Remove="UI\Registros\guardar.png" />
+    <None Remove="UI\Registros\nuevo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Dal\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore.sqlite" Version="3.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Consultas\buscar.png" />
+    <Resource Include="UI\Registros\buscar.png" />
+    <Resource Include="UI\Registros\eliminar.png" />
+    <Resource Include="UI\Registros\guardar.png" />
+    <Resource Include="UI\Registros\nuevo.png" />
+  </ItemGroup>
+
+</Project>

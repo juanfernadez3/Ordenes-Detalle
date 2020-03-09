@@ -1,0 +1,25 @@
+﻿<Window x:Class="OrdenesDeCompra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrdenesDeCompra"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300" Background="LightGray" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu Width="auto" Height="24" VerticalAlignment="Top">
+            <MenuItem Header="Registros">
+                <MenuItem Name="RegistroCliente" Header="Clientes" Click="RegistroCliente_Click"></MenuItem>
+                <MenuItem Name="RegistroOrdenes" Header="Ordenes" Click="RegistroOrdenes_Click"></MenuItem>
+                <MenuItem Name="RegistroEmpleados" Header="Productos" Click="RegistroEmpleados_Click"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Consultas">
+                <MenuItem Name="ConsultarClientes" Header="Clientes" Click="ConsultarClientes_Click"></MenuItem>
+                <MenuItem Name="ConsultarOrdenes" Header="Ordenes" Click="ConsultarOrdenes_Click"></MenuItem>
+                <MenuItem Name="ConsultarProductos" Header="Productos" Click="ConsultarProductos_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

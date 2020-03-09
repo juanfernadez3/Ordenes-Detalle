@@ -1,0 +1,103 @@
+﻿<Window x:Class="OrdenesDeCompra.UI.Registros.FormularioOrdenes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrdenesDeCompra.UI.Registros"
+        mc:Ignorable="d"
+        Title="Formulario Ordene" Height="470" Width="850" Background="LightGray" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow">
+    <Grid Height="auto" Width="auto">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Height="auto"  Width="auto" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
+            <TextBlock Width="80" Text="OrdenId: " HorizontalAlignment="Left" ></TextBlock>
+            <TextBlock Width="80" Text="ClienteId: " HorizontalAlignment="Left" Margin="0,15"></TextBlock>
+            <TextBlock Width="80" Text="AlmacenId: " HorizontalAlignment="Left" Margin="0,0"></TextBlock>
+            <TextBlock Width="80" Text="Fecha Orden:" HorizontalAlignment="Left" Margin="0,10"></TextBlock>
+            <TextBlock Width="80" Text="Total:" HorizontalAlignment="Left" Margin="0,5"></TextBlock>
+        </StackPanel>
+        <TextBox Name="OrdenIDTextBox" Height="20" Margin="155,2,548,118" 
+                         Grid.Row=" 0" Text="0" HorizontalContentAlignment="Center"></TextBox>
+
+        <TextBox Name="ClienteIdTextBox" Height="20" 
+                         Margin="155,30,548,90" Grid.Row=" 0" Text="0" HorizontalContentAlignment="Center">
+        </TextBox>
+
+        <TextBox Name="AlmacenIdTextBox" Height="20" 
+                         Margin="155,57,548,63" Grid.Row=" 0" Text="0" HorizontalContentAlignment="Center">
+        </TextBox>
+
+        <DatePicker Name="FechaOrdenDateTimePicker"
+                            Grid.Row="0" Margin="155,80,542,19"/>
+        <TextBox Name="TotalTextBox" Height="20" Text="0" HorizontalContentAlignment="Center"
+                         Margin="155,119,538,1" Grid.Row=" 0"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Height="auto" Width="auto" Margin="5,14,-5,-14">
+
+            <TextBlock Text="ProductoId:"  Grid.Row="1" 
+                               Width="auto" HorizontalAlignment="Left">
+
+            </TextBlock>
+
+            <TextBox Name="ProductoIdTextBox" Width="100" Margin="25,0" 
+                             HorizontalContentAlignment="Center" Text="0"></TextBox>
+            <TextBlock Text="Cantidad:" Width="auto" HorizontalAlignment="Stretch">
+
+            </TextBlock>
+
+            <TextBox Name="CantidadTextBox" Margin="20,0" Width="100"
+                             HorizontalContentAlignment="Center" Text="0" Height="20">
+
+            </TextBox>
+
+            <Button Name="AgregarButton" Width="88" Content="Agregar" 
+                            HorizontalContentAlignment="Right" Click="AgregarButton_Click" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2">
+                <Button.Background>
+                    <ImageBrush AlignmentX="Left" Stretch="Uniform" ImageSource="guardar.png"/>
+                </Button.Background>
+
+            </Button>
+
+        </StackPanel>
+
+        <DataGrid Name="DetalleOrdenDataGrid" Grid.Row="2" Margin="0,19,5,-154"
+                          Background="LightGray"></DataGrid>
+
+        <Button Name="RemoverDetalleButton" Content="Remover detalle" Grid.Row="1" 
+                        Margin="5,219,0,-219" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="155" Click="RemoverDetalleButton_Click" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="eliminar.png" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Grid.Row="2" Margin="0,239,0,-240" Width="300">
+            <Button Name="NuevoButton" Height="30" Width="80" HorizontalContentAlignment="Right" Click="NuevoButton_Click" Content="Nuevo" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform"  AlignmentX="Left" ImageSource="nuevo.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="GuardarButton" Height="30" Width="95" HorizontalContentAlignment="Right" Margin="10,0" Click="GuardarButton_Click"  Content="Guardar" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2">
+                <Button.Background>
+                    <ImageBrush ImageSource="guardar.png" Stretch="Uniform" AlignmentX="Left"/>
+                </Button.Background>
+
+            </Button>
+            <Button Name="EliminarButton" Height="30" Width="90" HorizontalContentAlignment="Right" Margin="10,0" Click="EliminarButton_Click"  Content="Eliminar" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="2">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform"  AlignmentX="Left" ImageSource="eliminar.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Button Name="BuscarButton" Width="90" Content="Buscar" HorizontalAlignment="Left"
+                        HorizontalContentAlignment="Right" Grid.Row="0" Margin="314,0,0,114" Click="BuscarButton_Click" FontWeight="Bold" FontSize="16" Height="25" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" AlignmentX="Left" ImageSource="buscar.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
